@@ -1,0 +1,420 @@
+<!--
+  London Inn Menu - HTML organizado y limpio
+  Estructura: header, filtros, menú de productos, footer
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>London Inn</title>
+  <link rel="preload" href="styles.css" as="style">
+  <link rel="preload" href="scripts.js" as="script">
+  <link rel="preload" href="crs/img/logo london inn.jpeg" as="image" type="image/jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta http-equiv="Cache-control" content="public">
+  <meta name="theme-color" content="#14231c">
+  <link rel="icon" type="image/svg+xml" href="crs/img%20favicon/favicon.svg">
+  <link rel="icon" type="image/png" sizes="96x96" href="crs/img%20favicon/favicon-96x96.png">
+  <link rel="shortcut icon" href="crs/img%20favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="crs/img%20favicon/apple-touch-icon.png">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <img src="crs/img/logo london inn.jpeg" alt="Logo London Inn" class="logo">
+  </header>
+
+  <!-- Filtros de categoría -->
+  <nav class="filters" aria-label="Categorías del menú">
+    <button class="filter-toggle" type="button" aria-expanded="false" aria-controls="categoryOptions">
+      <span>Categorías</span>
+      <span class="filter-toggle-icon" aria-hidden="true">☰</span>
+    </button>
+    <div class="filter-options" id="categoryOptions">
+      <button class="filter-btn" type="button" data-category="all" aria-pressed="false">
+        <svg class="category-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="8" rx="1"/><rect x="3" y="13" width="8" height="8" rx="1"/><rect x="13" y="13" width="8" height="8" rx="1"/></svg>
+        <span>Todos</span>
+      </button>
+      <button class="filter-btn" type="button" data-category="licores" aria-pressed="false">
+        <svg class="category-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3h8l-1 6a3 3 0 0 1-6 0L8 3Z"/><path d="M12 12v9m-3 0h6"/></svg>
+        <span>Licores</span>
+      </button>
+      <button class="filter-btn" type="button" data-category="bebidas" aria-pressed="false">
+        <svg class="category-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 3h4v3l2 2v12H8V8l2-2V3Z"/><path d="M10 6h4M8 12h8"/></svg>
+        <span>Bebidas</span>
+      </button>
+      <button class="filter-btn" type="button" data-category="comidas" aria-pressed="false">
+        <svg class="category-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10a8 8 0 0 1 16 0H4Z"/><path d="M4 12h16v3H4zM5 17h14v3H5z"/><path d="M8 13.5h.01M12 13.5h.01M16 13.5h.01"/></svg>
+        <span>Comidas</span>
+      </button>
+      <button class="filter-btn" type="button" data-category="entradas" aria-pressed="false">
+        <svg class="category-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h18l-2 7H5l-2-7Z"/><path d="m7 9 1-2m4 2 1-3m4 3 1-2"/></svg>
+        <span>Entradas</span>
+      </button>
+      <button class="filter-btn" type="button" data-category="snaks" aria-pressed="false">
+        <svg class="category-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="8.5" cy="9" r="1"/><circle cx="15.5" cy="8" r="1"/><circle cx="11" cy="15" r="1"/><circle cx="16" cy="15" r="1"/></svg>
+        <span>Snacks</span>
+      </button>
+      <button class="filter-btn" type="button" data-category="cafeteria" aria-pressed="false">
+        <svg class="category-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h13v7a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V9Z"/><path d="M17 11h1a3 3 0 0 1 0 6h-2M7 4v2m4-2v2m4-2v2"/></svg>
+        <span>Cafetería</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Menú de productos -->
+  <main class="menu is-unfiltered">
+    <div class="product" data-category="licores">
+      <div class="carousel">
+        <img src="crs/img/CLUBCOLOMBIA-C2.png" alt="Club Colombia" class="carousel-image active">
+        <img src="crs/imagenes de Whatsaap/cervezas nacionales.jpeg" alt="Poker y Aguila" class="carousel-image">
+        <button class="carousel-btn prev"></button>
+        <button class="carousel-btn next"></button>
+      </div>
+      <h3>Cerveza Nacional</h3>
+      <ul>
+        <li>Club Colombia</li>
+        <li>Poker</li>
+        <li>Aguila</li>
+      </ul>
+      <h4>$5.000</h4>
+      <div class="rating-stars" data-product="cerveza-nacional">
+        <span class="star" data-value="1">★</span>
+        <span class="star" data-value="2">★</span>
+        <span class="star" data-value="3">★</span>
+        <span class="star" data-value="4">★</span>
+        <span class="star" data-value="5">★</span>
+      </div>
+    </div>
+    <div class="product" data-category="licores">
+      <div class="carousel">
+        <img src="crs/img/corona.webp" alt="Corona" class="carousel-image active">
+        <img src="crs/imagenes de Whatsaap/cervezas importadas 2.jpeg" alt="Stella Artois" class="carousel-image">
+        <button class="carousel-btn prev">‹</button>
+        <button class="carousel-btn next">›</button>
+      </div>
+      <h3>Cerveza Importada</h3>
+      <ul>
+        <li>Corona</li>
+        <li>Stella Artois</li>
+      </ul>
+      <h4>$9.000</h4>
+      <h4>Corona Cero $6.000</h4>
+      <div class="rating-stars" data-product="cerveza-importada">
+        <span class="star" data-value="1">★</span>
+        <span class="star" data-value="2">★</span>
+        <span class="star" data-value="3">★</span>
+        <span class="star" data-value="4">★</span>
+        <span class="star" data-value="5">★</span>
+      </div>
+    </div>
+    <div class="product" data-category="licores">
+        <img src="crs/imagenes de Whatsaap/cocteles.jpeg" alt="Cócteles">
+      <h3>Cócteles</h3>
+      <p>Cócteles artesanales con ingredientes de calidad.</p>
+      <h4>$18.000</h4>
+      <h4>2x $30.000</h4>
+      <div class="rating-stars" data-product="cocteles">
+        <span class="star" data-value="1">★</span>
+        <span class="star" data-value="2">★</span>
+        <span class="star" data-value="3">★</span>
+        <span class="star" data-value="4">★</span>
+        <span class="star" data-value="5">★</span>
+      </div>
+    </div>
+    <div class="product" data-category="licores">
+      <img src="crs/img/shots.png" alt="Shots de licores">
+      <h3>Shots</h3>
+      <p>Shots de nuestros mejores licores.</p>
+      <h4>$15.000</h4>
+      <div class="rating-stars" data-product="shots">
+        <span class="star" data-value="1">★</span>
+        <span class="star" data-value="2">★</span>
+        <span class="star" data-value="3">★</span>
+        <span class="star" data-value="4">★</span>
+        <span class="star" data-value="5">★</span>
+      </div>
+    </div>
+    <div class="product" data-category="licores">
+      <img src="crs/imagenes de Whatsaap/amarillo.jpeg" alt="Aguardiente Amarillo">
+      <h3>Aguardiente Amarillo</h3>
+      <p>Un agradable aguardiente Amarillo de calidad.</p>
+      <h4>Litro $160.000</h4>
+      <h4>Botella $120.000</h4>
+      <h4>Media $60.000</h4>
+      <div class="rating-stars" data-product="aguardiente-amarillo">
+        <span class="star" data-value="1">★</span>
+        <span class="star" data-value="2">★</span>
+        <span class="star" data-value="3">★</span>
+        <span class="star" data-value="4">★</span>
+        <span class="star" data-value="5">★</span>
+      </div>
+    </div>
+    <div class="product" data-category="licores">
+      <img src="crs/imagenes de Whatsaap/Famous grouse.jpeg" alt="The Famous Grouse">
+      <h3>The Famous Grouse</h3>
+      <p>Un prestigioso blended Scotch whisky producido en Escocia.</p>
+      <h4>Botella $150.000</h4>
+      <div class="rating-stars" data-product="the-famous-grouse">
+        <span class="star" data-value="1">★</span>
+        <span class="star" data-value="2">★</span>
+        <span class="star" data-value="3">★</span>
+        <span class="star" data-value="4">★</span>
+        <span class="star" data-value="5">★</span>
+      </div>
+    </div>
+    <div class="product" data-category="licores">
+      <img src="crs/img/KING_OF_QUEENS.webp" alt="King of Queens">
+      <h3>KING OF QUEENS</h3>
+      <p>Un Scotch blended joven y asequible, producido en Escocia.</p>
+      <h4>Botella $120.000</h4>
+      <div class="rating-stars" data-product="king-of-queens">
+        <span class="star" data-value="1">★</span>
+        <span class="star" data-value="2">★</span>
+        <span class="star" data-value="3">★</span>
+        <span class="star" data-value="4">★</span>
+        <span class="star" data-value="5">★</span>
+      </div>
+    </div>
+    <div class="product" data-category="licores">
+      <img src="crs/img/JAMESON-GINGER-LIME.jpg" alt="Jameson Ginger Lime">
+      <h3>Jameson Ginger Lime</h3>
+      <p>Whiskey irlandés.</p>
+      <h4>Botella $240.000</h4>
+      <div class="rating-stars" data-product="jameson-ginger-lime">
+        <span class="star" data-value="1">★</span>
+        <span class="star" data-value="2">★</span>
+        <span class="star" data-value="3">★</span>
+        <span class="star" data-value="4">★</span>
+        <span class="star" data-value="5">★</span>
+      </div>
+    </div>
+    <div class="product" data-category="licores">
+      <img src="crs/img/chivas 13 años.webp" alt="Chivas Regal Extra 13 Años">
+      <h3>Chivas Regal Extra 13 Años</h3>
+      <p>El Chivas Regal Extra 13 Años es una expresión refinada del arte del blending escocés.</p>
+      <h4>Botella $280.000</h4>
+      <div class="rating-stars" data-product="chivas-13">
+        <span class="star" data-value="1">★</span>
+        <span class="star" data-value="2">★</span>
+        <span class="star" data-value="3">★</span>
+        <span class="star" data-value="4">★</span>
+        <span class="star" data-value="5">★</span>
+      </div>
+    </div>
+    <div class="product" data-category="licores">
+      <img src="crs/imagenes de Whatsaap/centenario.jpeg" alt="Tequila Centenario">
+      <h3>Tequila Centenario</h3>
+      <p>Una marca premium de tequila 100% de agave azul.</p>
+      <h4>Botella $280.000</h4>
+      <div class="rating-stars" data-product="tequila-centenario">
+        <span class="star" data-value="1">★</span>
+        <span class="star" data-value="2">★</span>
+        <span class="star" data-value="3">★</span>
+        <span class="star" data-value="4">★</span>
+        <span class="star" data-value="5">★</span>
+      </div>
+    </div>
+    <div class="product" data-category="bebidas">
+      <img src="crs/img/botella_cristal_100_100.5e31c8c214c05.avif" alt="Agua">
+      <h3>Agua</h3>
+      <p>Agua mineral natural.</p>
+      <h4>Botella $4.000</h4>
+      <div class="rating-stars" data-product="agua">
+        <span class="star" data-value="1">★</span>
+        <span class="star" data-value="2">★</span>
+        <span class="star" data-value="3">★</span>
+        <span class="star" data-value="4">★</span>
+        <span class="star" data-value="5">★</span>
+      </div>
+    </div>
+    <div class="product" data-category="bebidas">
+    <img src="crs/imagenes de Whatsaap/gatorade.jpeg" alt="Gatorade">
+      <h3>Gatorade</h3>
+      <p>Bebida isotónica para rehidratarte.</p>
+      <h4>Botella $6.000</h4>
+      <div class="rating-stars" data-product="gatorade">
+        <span class="star" data-value="1">★</span>
+        <span class="star" data-value="2">★</span>
+        <span class="star" data-value="3">★</span>
+        <span class="star" data-value="4">★</span>
+        <span class="star" data-value="5">★</span>
+      </div>
+    </div>
+    <div class="product" data-category="bebidas">
+      <img src="crs/imagenes de Whatsaap/Cola y pola.jpeg" alt="Cola & Pola">
+      <h3>Cola & Pola</h3>
+      <p>Bebida gaseosa refrescante.</p>
+      <h4>Botella $5.500</h4>
+      <div class="rating-stars" data-product="cola-y-pola">
+        <span class="star" data-value="1">★</span>
+        <span class="star" data-value="2">★</span>
+        <span class="star" data-value="3">★</span>
+        <span class="star" data-value="4">★</span>
+        <span class="star" data-value="5">★</span>
+      </div>
+    </div>
+    <div class="product" data-category="bebidas">
+      <img src="crs/imagenes de Whatsaap/Gaseosas.jpeg" alt="Gaseosa">
+      <h3>Gaseosa</h3>
+      <p>Bebida gaseosa refrescante.</p>
+      <h4>Botella 400.ml $5.000</h4>
+      <h4>Botella 250.ml $4.000</h4>
+      <div class="rating-stars" data-product="gaseosa">
+        <span class="star" data-value="1">★</span>
+        <span class="star" data-value="2">★</span>
+        <span class="star" data-value="3">★</span>
+        <span class="star" data-value="4">★</span>
+        <span class="star" data-value="5">★</span>
+      </div>
+    </div>
+    <div class="product" data-category="comidas">
+      <img src="crs/imagenes de Whatsaap/hamburguesa sensilla.jpeg" alt="Hamburguesa sencilla">
+      <h3>Hamburguesa Sencilla</h3>
+      <h4>The Rolling Stones</h4>
+      <h4>Hamburguesa de la casa</h4>
+      <p>Hamburguesa sencilla con carne 100% artesanal de res, queso fundido, tomate, cebolla caramelizada, tocineta y papas rústicas.</p>
+      <h4>$20.000</h4>
+      <div class="rating-stars" data-product="hamburguesa-sencilla">
+        <span class="star" data-value="1">★</span>
+        <span class="star" data-value="2">★</span>
+        <span class="star" data-value="3">★</span>
+        <span class="star" data-value="4">★</span>
+        <span class="star" data-value="5">★</span>
+      </div>
+    </div>
+    <div class="product" data-category="comidas">
+      <img src="crs/imagenes de Whatsaap/hamburguesa doble.jpeg" alt="Hamburguesa doble carne">
+      <h3>Hamburguesa Doble Carne</h3>
+      <h4>The Who</h4>
+      <h4>Hamburguesa de la casa</h4>
+      <p>Hamburguesa doble carne 100% artesanal, con queso fundido, tomate, cebolla caramelizada, tocineta, papas rústicas y cabello de ángel.</p>
+      <h4>$27.000</h4>
+      <div class="rating-stars" data-product="hamburguesa-doble">
+        <span class="star" data-value="1">★</span>
+        <span class="star" data-value="2">★</span>
+        <span class="star" data-value="3">★</span>
+        <span class="star" data-value="4">★</span>
+        <span class="star" data-value="5">★</span>
+      </div>
+    </div>
+    <div class="product" data-category="comidas">
+      <img src="crs/img/churrasco.jpg" alt="Churrasco">
+      <h3>Churrasco a la Parrilla</h3>
+      <p>Jugoso y sin miedo al fuego, servido con papas rústicas crujientes, ensalada fresca y chimichurri de la casa.</p>
+      <h4>$35.000</h4>
+      <div class="rating-stars" data-product="churrasco">
+        <span class="star" data-value="1">★</span>
+        <span class="star" data-value="2">★</span>
+        <span class="star" data-value="3">★</span>
+        <span class="star" data-value="4">★</span>
+        <span class="star" data-value="5">★</span>
+      </div>
+    </div>
+    <div class="product" data-category="comidas">
+      <h3>Chillhouse</h3>
+      <p>Frijoles cargados con carne molida sazonada y coronados con nachos crujientes. Una explosión al estilo rock que sacude tu mesa.</p>
+      <h4>$18.000</h4>
+      <div class="rating-stars" data-product="empanadas">
+        <span class="star" data-value="1">★</span>
+        <span class="star" data-value="2">★</span>
+        <span class="star" data-value="3">★</span>
+        <span class="star" data-value="4">★</span>
+        <span class="star" data-value="5">★</span>
+      </div>
+    </div>
+    <div class="product" data-category="entradas">
+      <img src="crs/img/empanadas.jpg" alt="Empanadas">
+      <h3>Empanadas x6</h3>
+      <p>Empanadas rellenas de carne, listas para compartir.</p>
+      <h4>$16.000</h4>
+      <div class="rating-stars" data-product="picada">
+        <span class="star" data-value="1">★</span>
+        <span class="star" data-value="2">★</span>
+        <span class="star" data-value="3">★</span>
+        <span class="star" data-value="4">★</span>
+        <span class="star" data-value="5">★</span>
+      </div>
+    </div>
+    <div class="product" data-category="entradas">
+    <img src="crs/imagenes de Whatsaap/Picada.jpeg" alt="Picada para Dos">
+      <h3>Picada para Dos</h3>
+      <p>Cuatro cortes magistrales al fuego, chorizo indomable y papas rústicas doradas que crujen como amplificador.</p>
+      <h4>$25.000</h4>
+      <div class="rating-stars" data-product="chillhouse">
+        <span class="star" data-value="1">★</span>
+        <span class="star" data-value="2">★</span>
+        <span class="star" data-value="3">★</span>
+        <span class="star" data-value="4">★</span>
+        <span class="star" data-value="5">★</span>
+      </div>
+    </div>
+  </main>
+
+  <!-- Botón flotante de WhatsApp -->
+  <a href="https://wa.me/573332502727" target="_blank" class="whatsapp-btn" title="Contactar por WhatsApp" aria-label="Contactar por WhatsApp">
+    <img src="crs/img/WhatsApp.svg.png" alt="WhatsApp" class="whatsapp-icon" loading="lazy">
+  </a>
+
+  <!-- Modal de imagen -->
+  <div id="imageModal" class="image-modal">
+    <span class="close">&times;</span>
+    <img class="modal-image" id="modalImage" src="" alt="Zoom producto">
+  </div>
+
+  <dialog class="map-dialog" id="mapDialog" aria-labelledby="mapDialogTitle">
+    <div class="map-dialog__header">
+      <h2 id="mapDialogTitle">Cómo llegar</h2>
+      <button class="map-dialog__close" type="button" aria-label="Cerrar mapa">&times;</button>
+    </div>
+    <iframe
+      src="https://www.google.com/maps?q=Calle%2057%20%23%2027%20-%2043%2C%20Bogot%C3%A1%2C%20Colombia&amp;output=embed"
+      title="Mapa de Calle 57 # 27 - 43, Bogotá"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      allowfullscreen>
+    </iframe>
+  </dialog>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3></h3>
+        <p>“Media vida en Inglaterra para traer a Bogotá lo mejor de su cultura y calidad”</p>
+      </div>
+      <div class="footer-section services-section">
+        <h3>Servicios Adicionales</h3>
+        <p>Accede a nuestros servicios asociados:</p>
+        <ul>
+          <li>Parqueadero cerrado</li>
+          <li>Servicio de carga de vehículos eléctricos</li>
+          <li>Hostal recomendado</li>
+          <li>Eventos y reservaciones</li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contacto</h3>
+        <p>📱 +57 333 250 27 27</p>
+        <p>📍 <a class="contact-address" href="https://www.google.com/maps/search/?api=1&amp;query=Calle%2057%20%23%2027%20-%2043%2C%20Bogot%C3%A1%2C%20Colombia" target="_blank" rel="noopener noreferrer" aria-label="Mostrar Calle 57 # 27 - 43 en el mapa" aria-haspopup="dialog" aria-controls="mapDialog">Calle 57 # 27 - 43</a></p>
+      </div>
+      <div class="footer-section">
+        <h3>Redes sociales</h3>
+        <div class="social-links">
+          <a href="https://www.instagram.com/londoninn_col?igsh=NnNnZ2tjYWZvdTly" target="_blank">Instagram</a>
+          <a href="https://wa.me/573332502727" target="_blank">WhatsApp</a>
+          <a href="https://www.booking.com/hotel/co/the-london-inn-campin-bogota.es.html?aid=356984&label=gog235jc-10CAsoMkIcdGhlLWxvbmRvbi1pbm4tY2FtcGluLWJvZ290YUhSWANoMogBAZgBM7gBF8gBDNgBA-gBAfgBAYgCAagCAbgCy_-8zgbAAgHSAiRjNjM4ZGVjOS04NmFlLTQ2ZjMtYmRmOC0yYTkzM2VmYzgzYzTYAgHgAgE&sid=b7c557675a6a759505de7f42786bf989&dist=0&group_adults=2&group_children=0&keep_landing=1&no_rooms=1&sb_price_type=total&type=total&" target="_blank" class="booking-btn">Booking - Hostal</a>
+        </div>
+      </div>
+    </div>
+    <p class="footer-bottom">&copy; 2026 Betto. London Inn. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
