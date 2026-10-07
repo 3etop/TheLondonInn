@@ -203,6 +203,14 @@ header {
   margin-bottom: 1rem;
   transition: transform 0.3s;
 }
+.product img.menu-photo-crop {
+  display: block;
+  width: 100%;
+  height: 180px;
+  max-height: none;
+  object-fit: cover;
+  object-position: center;
+}
 .product:hover img, .product:hover .carousel-image {
   transform: scale(1.02);
 }
